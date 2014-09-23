@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial "partials/head" %>
+    <script src="//use.typekit.net/vlq6nql.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="m-meme">
+        <img style="float:left;margin:20px 20px 0 0;" src="<%= image_path("cirBug-black.png") %>"/>
+      <h1>Social Image Generator</h1>
+<!--
+      <div>
+          <strong><a href="<%= image_path("meme-generator-fonts.zip") %>">Click here</a> to download the required fonts. Follow <a href="http://o7.no/1upAbJ9" target="_blank">these instructions</a> for proper installation.</strong>
+      </div>
+      <hr style="margin-bottom:20px;">
+-->
+      <%= partial "partials/editor" %>
+      <%= partial "partials/canvas" %>
+    </div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'settings' %>
+  </body>
+</html>
