@@ -49,12 +49,18 @@ var MEME_SETTINGS = {
 
   // Path to the watermark image source, or blank for no watermark:
   // Alternatively, use '<%= asset_data_uri("vox.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
-  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path("cirBug-white.png") %>',
+  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path("reveal-white.png") %>',
   
   // Watermark image options: set to empty array to disable watermark picker.
   // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
+    {text: 'Reveal logo (black)', value: '<%= image_path("reveal-black.png") %>', data: '<%= asset_data_uri("reveal-black.png") %>'},
+    {text: 'Reveal logo (white)', value: '<%= image_path("reveal-white.png") %>', data: '<%= asset_data_uri("reveal-white.png") %>'},
+    {text: 'Reveal logo w/ URL (black)', value: '<%= image_path("revealUrl-black.png") %>', data: '<%= asset_data_uri("revealUrl-black.png") %>'},
+    {text: 'Reveal logo w/ URL (white)', value: '<%= image_path("revealUrl-white.png") %>', data: '<%= asset_data_uri("revealUrl-white.png") %>'},
+    {text: 'Reveal bug (black)', value: '<%= image_path("revealBug-black.png") %>', data: '<%= asset_data_uri("revealBug-black.png") %>'},
+    {text: 'Reveal bug (white)', value: '<%= image_path("revealBug-white.png") %>', data: '<%= asset_data_uri("revealBug-white.png") %>'},
     {text: 'CIR bug (white)', value: '<%= image_path("cirBug-white.png") %>', data: '<%= asset_data_uri("cirBug-white.png") %>'},
     {text: 'CIR bug (black)', value: '<%= image_path("cirBug-black.png") %>', data: '<%= asset_data_uri("cirBug-black.png") %>'},
     {text: 'CIR bug w/ URL (white)', value: '<%= image_path("cirBugUrl-white.png") %>', data: '<%= asset_data_uri("cirBugUrl-white.png") %>'},
